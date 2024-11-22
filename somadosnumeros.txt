@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ATI1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double soma = 0;
+            double contador = 0;
+            double numero;
+            double result;
+
+            Console.WriteLine("Digite números inteiros positivos ( ou 0 para sair)");
+            numero = double.Parse(Console.ReadLine());
+
+            while (numero != 0)
+            {
+                soma += numero;
+                contador++;
+
+                numero = double.Parse(Console.ReadLine());
+            }
+
+            if (contador > 0)
+            {
+
+                result = soma;
+                Console.WriteLine($"A somas dos numeros digitados é : {soma}");
+            }
+            else
+            {
+                Console.WriteLine("Nenhum numero digitado");
+            }
+
+
+
+            Console.ReadKey();
+        }
+    }
+
+}
